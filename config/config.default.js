@@ -9,6 +9,14 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [ 'cors', 'report' ];
 
+  // 关团csrf 安全
+  config.security = {
+    csrf: false,
+    xframe: {
+      enable: false,
+    },
+  };
+
   config.view = {
     defaultViewEngine: 'nunjucks',
     mapping: {
@@ -23,6 +31,15 @@ module.exports = appInfo => {
   config.static = {
     prefix: '', // 配置需不需要加前缀
     dir: path.join(appInfo.baseDir, 'app/public'),
+  };
+
+  config.sequelize = {
+    dialect: 'mysql',
+    username: 'root',
+    password: '123',
+    host: '127.0.0.1',
+    port: 3306,
+    database: 'egg-sequelize-doc-default',
   };
 
   return config;

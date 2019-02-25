@@ -2,9 +2,8 @@
 
 module.exports = () => {
   return async function(ctx, next) {
-    // ctx.set('Access-Control-Allow-Origin', '*');
+    ctx.set('Access-Control-Allow-Origin', '*');
     const { request } = ctx;
-    console.log(request.header.origin);
     if (
       request.header.origin === 'http://192.168.16.105:7001' ||
       request.header.origin === 'http://127.0.0.1:7001'
@@ -20,6 +19,6 @@ module.exports = () => {
       );
     }
 
-    next();
+    await next();
   };
 };

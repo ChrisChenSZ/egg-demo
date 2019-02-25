@@ -82,4 +82,9 @@ module.exports = app => {
   router.get('/newz', controller.newz.newz);
   router.get('/event/hot', controller.event.hotEvent.eat);
   router.get('/swagger.json', controller.home.swaggerJson);
+  router.resources('users', '/users', controller.users);
+
+  // 会员服务
+  router.get('/courses/Evaluate/:id', controller.courses.evaluate);
+  router.post('/courses/create', controller.courses.create);
 };
