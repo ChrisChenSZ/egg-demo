@@ -5,8 +5,9 @@ module.exports = app => {
   // console.log('=======', app.model.define);
   const User = app.model.define('user', {
     id: { type: INTEGER, primaryKey: true, autoIncrement: true },
-    name: STRING(30),
-    age: INTEGER,
+    username: { type: STRING(50), allowNull: false, unique: true },
+    password: { type: STRING(50), allowNull: false },
+    tel: STRING(11),
     created_at: DATE,
     updated_at: DATE,
   });

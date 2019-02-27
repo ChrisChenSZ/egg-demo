@@ -11,7 +11,7 @@ const swaggerDefinition = {
     version: '1.0.0', // Version (required)
     description: '测试接口', // Description (optional)
   },
-  host: `192.168.16.105:${PORT}`, // Host (optional)
+  host: `127.0.0.1:${PORT}`, // Host (optional)
   basePath: '/', // Base path (optional)
 };
 

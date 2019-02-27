@@ -18,6 +18,10 @@ class HomeController extends Controller {
   async swaggerJson() {
     this.ctx.body = swaggerSpec;
   }
+
+  async loginSuccess() {
+    await this.ctx.render('loginSuccess.njk');
+  }
 }
 
 module.exports = HomeController;

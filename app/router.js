@@ -44,13 +44,6 @@ module.exports = app => {
   /**
    * @swagger
    * tags:
-   *   name: Users
-   *   description: User management and login
-   */
-
-  /**
-   * @swagger
-   * tags:
    *   - name: Login
    *     description: Login
    *   - name: Accounts
@@ -82,9 +75,32 @@ module.exports = app => {
   router.get('/newz', controller.newz.newz);
   router.get('/event/hot', controller.event.hotEvent.eat);
   router.get('/swagger.json', controller.home.swaggerJson);
-  router.resources('users', '/users', controller.users);
-
   // 会员服务
   router.get('/courses/Evaluate/:id', controller.courses.evaluate);
   router.post('/courses/create', controller.courses.create);
+  router.get('/java/service', controller.javaService.index);
+  router.get('/cars', controller.cars.index);
+  router.get('/loginSuccess', controller.home.loginSuccess);
+
+  /**
+   * @swagger
+   * tags:
+   *   - name: Users
+   *     description: 用户
+   *   - name: products
+   *     description: 商品列表
+   */
+
+  /**
+   * @swagger
+   * /users:
+   *   get:
+   *     tags: [Users]
+   *     description: 获取所有用户
+   *     responses:
+   *       200:
+   *         description: 获取所有用户
+   */
+
+  router.resources('users', '/users', controller.users);
 };

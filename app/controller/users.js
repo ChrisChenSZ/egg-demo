@@ -16,7 +16,8 @@ class UserController extends Controller {
       offset: toInt(ctx.query.offset),
     };
     const data = await ctx.model.User.findAll(query);
-    const Op = this.app.Sequelize.Op;
+    // 查询
+    // const Op = this.app.Sequelize.Op;
     // ctx.model.User.findAndCountAll({
     //   where: {
     //     name: {
@@ -28,31 +29,47 @@ class UserController extends Controller {
     //   console.log(222, result.rows);
     // });
     // console.log('user_get', data, typeof data);
-    const dataTest = await ctx.model.User.findOne({
-      where: {
-        [Op.or]: [{ id: [ 7 ] }, { id: [ 8 ] }],
-      },
-    });
-    console.log(111, dataTest);
+    // const dataTest = await ctx.model.User.findOne({
+    //   where: {
+    //     [Op.or]: [{ id: [ 7 ] }, { id: [ 8 ] }],
+    //   },
+    // });
     ctx.body = data;
   }
 
   async show() {
     const ctx = this.ctx;
-    ctx.body = await ctx.model.User.findById(toInt(ctx.params.id));
+    ctx.status = 200;
+    const { username, password, tel, id } = await ctx.model.User.findById(
+      toInt(ctx.params.id)
+    );
+    ctx.body = { username, password, tel, id };
     // console.log('user_get/:id', ctx.body);
   }
 
   async create() {
     const ctx = this.ctx;
-    // const { name, age } = ctx.request.body;
-    // const user = await ctx.model.User.create({ name, age });
-    const user = await ctx.model.User.bulkCreate([
-      { name: '周杰伦', age: 22 },
-      { name: '刘德华', age: 65 },
-    ]);
-    ctx.status = 201;
-    ctx.body = user;
+    const { username, password, tel } = ctx.request.body;
+    const userNameInSql = await ctx.model.User.findOne({
+      where: {
+        username,
+      },
+    });
+    if (userNameInSql) {
+      ctx.body = { code: 415, msg: '用户已存在' };
+    } else {
+      const user = await ctx.model.User.create({ username, password, tel });
+      ctx.status = 201;
+      ctx.body = {
+        code: 200,
+        data: user,
+      };
+    }
+    // 一次增加多个用户
+    // const user = await ctx.model.User.bulkCreate([
+    //   { name: '周杰伦', age: 22 },
+    //   { name: '刘德华', age: 65 },
+    // ]);
   }
 
   async update() {
