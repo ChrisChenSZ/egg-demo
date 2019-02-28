@@ -103,4 +103,5 @@ module.exports = app => {
    */
 
   router.resources('users', '/users', controller.users);
+  router.resources('login', '/login', controller.login);
 };

@@ -33,7 +33,6 @@ class JavaServiceController extends Controller {
 
   async getST(result) {
     const resUrl = JSON.parse(JSON.stringify(result)).headers.location;
-    console.log('resUrl ====', JSON.parse(JSON.stringify(result)));
     const rex = /tickets\/(\S*)/;
     const TGT = resUrl.match(rex)[1];
     const resST = await this.postCurl(`${url}/${TGT}`, {

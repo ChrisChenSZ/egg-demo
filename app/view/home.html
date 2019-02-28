@@ -73,6 +73,25 @@
   <script>
     window.onload = function() {
       $('.btn').click(function() {
+        // $.ajax({
+        //   url:
+        //     // 'http://192.168.4.99:8079/ms-member-service/messages/status/0/count',
+        //   'http://192.168.7.192:7001/users',
+        //   headers: {
+        //     userid: '123456'
+        //   },
+        //   type: 'GET',
+        //   success: function(data) {}
+        // });
+        // $.get(
+        //   'http://192.168.7.192:7001/users',
+        //   function(success) {
+        //     console.log('success===', success);
+        //   }
+        // );
+        // document.location.href = '/loginSuccess';
+      });
+      $('.btn').click(function() {
         $.get('/java/service', function(success) {
           console.log('success===', success);
         });

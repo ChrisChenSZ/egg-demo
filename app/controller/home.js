@@ -8,7 +8,7 @@ class HomeController extends Controller {
   async index() {
     // const username = 'chris';
     const userInfo = await this.service.home.getUserInfo();
-    await this.ctx.render('home.njk', userInfo);
+    await this.ctx.render('home.html', userInfo);
   }
 
   async json() {
@@ -20,7 +20,7 @@ class HomeController extends Controller {
   }
 
   async loginSuccess() {
-    await this.ctx.render('loginSuccess.njk');
+    await this.ctx.render('loginSuccess.html');
   }
 }
 
