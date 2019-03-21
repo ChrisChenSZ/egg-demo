@@ -12,7 +12,9 @@
     "jsonwebtoken": "^8.5.0",
     "mysql2": "^1.6.4",
     "sequelize": "^4.42.0",
-    "swagger-jsdoc": "^3.2.6"
+    "swagger-jsdoc": "^3.2.6",
+    "wechaty": "^0.22.6",
+    "wechaty-puppet-puppeteer": "^0.14.6"
   },
   "devDependencies": {
     "autod": "^3.0.1",

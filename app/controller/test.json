@@ -1,0 +1,77 @@
+{
+  "ref": "refs/heads/feature/member_service_season_1",
+  "before": "36182cfe7eb5165d0d941a1914d82b778addd509",
+  "after": "493be7237d42aae7b989acacd7ab2d1d3774e0d7",
+  "compare_url": "http://192.168.1.47:3000/mingshi-edu/ms-member-service-web/compare/36182cfe7eb5165d0d941a1914d82b778addd509...493be7237d42aae7b989acacd7ab2d1d3774e0d7",
+  "commits": [
+    {
+      "id": "493be7237d42aae7b989acacd7ab2d1d3774e0d7",
+      "message": "Merge branch 'feature/member_service_season_1' of 192.168.1.47:mingshi-edu/ms-member-service-web into feature/member_service_season_1\n",
+      "url": "http://192.168.1.47:3000/mingshi-edu/ms-member-service-web/commit/493be7237d42aae7b989acacd7ab2d1d3774e0d7",
+      "author": [Object],
+      "committer": [Object],
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "timestamp": "2019-03-04T11:29:09+08:00"
+    },
+    {
+      "id": "343efb2d3222ab7a35500947449af6069f61f744",
+      "message": "# 测试git webhook\n",
+      "url": "http://192.168.1.47:3000/mingshi-edu/ms-member-service-web/commit/343efb2d3222ab7a35500947449af6069f61f744",
+      "author": [Object],
+      "committer": [Object],
+      "added": [],
+      "removed": [],
+      "modified": [Array],
+      "timestamp": "2019-03-04T11:28:51+08:00"
+    }
+  ],
+  "repository": {
+    "id": 22,
+    "owner": {
+      "id": 2,
+      "login": "mingshi-edu",
+      "full_name": "",
+      "email": "",
+      "avatar_url": "http://192.168.1.47:3000/avatars/2",
+      "username": "mingshi-edu"
+    },
+    "name": "ms-member-service-web",
+    "full_name": "mingshi-edu/ms-member-service-web",
+    "description": "会员服务移动",
+    "private": false,
+    "fork": false,
+    "parent": null,
+    "empty": false,
+    "mirror": false,
+    "size": 9182208,
+    "html_url": "http://192.168.1.47:3000/mingshi-edu/ms-member-service-web",
+    "ssh_url": "root@192.168.1.47:mingshi-edu/ms-member-service-web.git",
+    "clone_url": "http://192.168.1.47:3000/mingshi-edu/ms-member-service-web.git",
+    "website": "",
+    "stars_count": 0,
+    "forks_count": 0,
+    "watchers_count": 3,
+    "open_issues_count": 0,
+    "default_branch": "master",
+    "created_at": "2018-12-21T07:42:55+08:00",
+    "updated_at": "2019-03-02T13:44:40+08:00"
+  },
+  "pusher": {
+    "id": 21,
+    "login": "chenyuntao",
+    "full_name": "",
+    "email": "chenyuntao@mingshiedu.com",
+    "avatar_url": "https://secure.gravatar.com/avatar/1795265e7fc4cce195044cf75493b4c2?d=identicon",
+    "username": "chenyuntao"
+  },
+  "sender": {
+    "id": 21,
+    "login": "chenyuntao",
+    "full_name": "",
+    "email": "chenyuntao@mingshiedu.com",
+    "avatar_url": "https://secure.gravatar.com/avatar/1795265e7fc4cce195044cf75493b4c2?d=identicon",
+    "username": "chenyuntao"
+  }
+}

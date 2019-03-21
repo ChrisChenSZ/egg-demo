@@ -49,3 +49,7 @@ swagger 注释编写参考 http://editor.swagger.io/#/ 一一对应
 #### 增加 Token 返回给前端
 
 参考文章 https://segmentfault.com/a/1190000017248226
+
+
+#### git push 通知 到微信或者qq
+ 遇到问题:微信需要2017年之前的账号，qq smallqq 已停止服务

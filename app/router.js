@@ -48,6 +48,8 @@ module.exports = app => {
    *     description: Login
    *   - name: Accounts
    *     description: Accounts
+   *   - name: Code
+   *     description: 小程序code
    */
 
   /**
@@ -103,5 +105,32 @@ module.exports = app => {
    */
 
   router.resources('users', '/users', controller.users);
+
+  /**
+   * @swagger
+   * /login:
+   *   post:
+   *     tags: [Login]
+   *     description: 登录
+   *     responses:
+   *       200:
+   *         description: 账户密码登录
+   */
   router.resources('login', '/login', controller.login);
+
+  /**
+   * @swagger
+   * /code/:id:
+   *   get:
+   *     tags: [Code]
+   *     description: 发送小程序用户code
+   *     responses:
+   *       200:
+   *         description: 换取token
+   */
+  router.resources('code', '/code', controller.code);
+  router.resources('gogs', '/gogs', controller.gogs);
+
+  require('./router/portal/productRouter.js')(app);
+  require('./router/portal/banner.js')(app);
 };

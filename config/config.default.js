@@ -7,12 +7,12 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1544541698442_7845';
 
   // add your config here
-  config.middleware = [ 'jwt', 'cors', 'report' ];
+  config.middleware = [ 'cors', 'report' ];
 
   // jwt 生成token 中间件设置
   config.jwt = {
     enable: true,
-    ignore: [ '/login/' ], // 哪些请求不需要认证
+    ignore: [ '/login' ], // 哪些请求不需要认证
   };
 
   // 关团csrf 安全
